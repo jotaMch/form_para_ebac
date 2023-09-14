@@ -1,0 +1,292 @@
+
+.main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  max-width: 960px;
+  width: 100%;
+  min-height: 440px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #08000fc0;
+  border-radius: 8px;
+  padding: 0 0 0 20px ;
+}
+
+body {
+  background-image: url(https://images.pexels.com/photos/957040/night-photograph-starry-sky-night-sky-star-957040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  filter: brightness(80%);
+  background-color: #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  width: 90%;
+  margin-bottom: 10px;
+  border-right: 2px solid #a047ed;
+  padding-right: 24px;
+}
+
+h3 {
+  text-transform: capitalize;
+  color:  #a047ed;
+}
+
+form input {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid  #a047ed;
+  color: #a047ed;
+  font-size: 12px;
+  outline: none;
+}
+
+select {
+  border: 2px solid  #a047ed;
+  background-color: #08000fc0;
+  color: #f1f1f1;
+  padding: 4px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  outline: none;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.req {
+  color: #c90036;
+}
+
+form label {
+  margin-top: 14px;
+  color: aliceblue;
+}
+
+form button:hover {
+  background-color: #a047ed;
+  color: #ffff;
+}
+
+
+nav {
+  background-color: #23012d;
+  padding: 4px;
+  border-radius: 8px;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  bottom: 40%;
+  right: 8%;
+}
+
+nav li {
+  width: 100%;
+}
+
+nav svg {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+}
+
+nav svg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.loading {
+  border: 4px solid  #a047ed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  animation: spin 2s linear infinite; 
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.table-div {
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  min-width: 640px;  
+  overflow-y: auto; /* Adiciona scroll vertical quando necessário */
+}
+
+.table-div::-webkit-scrollbar {
+  width: 8px; /* Largura do scrollbar */
+}
+
+.table-div::-webkit-scrollbar-track {
+  background-color: #a047ed; /* Cor da faixa de fundo do scrollbar */
+  border-radius: 30px;
+}
+
+.table-div::-webkit-scrollbar-thumb {
+  background-color: #08000f; /* Cor do thumb do scrollbar */
+  border-radius: 6px; 
+}
+
+.table-div {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+
+.thead-div h2 {
+  color: #a047ed;
+}
+
+.tbody-div ol {
+  padding: 0;
+  border-bottom: 1px solid #a047ed;
+}
+
+.tbody-div li {
+  color: aliceblue;
+  text-align: center;
+  /* max-width: 250px; */
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    flex-direction: column;
+    width: 80%;
+    padding: 8px;
+  }
+
+  
+    
+  form {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 26px;
+    border-bottom: 2px solid #a047ed;
+  }
+
+
+  .thead-div {
+    margin: 0 auto;
+  }
+
+  .table-div {   
+    min-width: none;
+    border: 1px solid #a047ed;
+  }
+
+  tbody ol {
+    padding: 0;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: none;
+  }
+
+  nav {
+    background-color: #08000ff7;
+    padding: 14px 4px 4px;
+    border-radius: 8px;
+    position: absolute;
+    left: 8%;
+    top: 70%;
+    bottom: 6%;
+    right: 8%;
+  }
+
+    
+  .loading {
+    border: 4px solid  #a047ed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: spin 2s linear infinite; 
+    position: absolute;
+    left: 45%;
+    top: 40%;
+  }
+
+  
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    flex-direction: column;
+    width: 80%;
+    padding: 0 8px;
+  }
+
+  .table-div {   
+    min-width: none;
+  }
+  form {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 26px;
+    border-bottom: 2px solid #a047ed;
+  }
+
+  .thead-div {
+    margin: 0 auto;
+  }
+  
+  .tbody-div ol {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #a047ed;
+    max-width: 40%;
+  }
+
+  .resposta {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .span-border {
+    display: block;
+  }
+
+  
+  nav {
+    background-color: #08000ff7;
+    padding: 14px 4px 4px;
+    border-radius: 8px;
+    position: absolute;
+    left: 8%;
+    top: 70%;
+    bottom: 6%;
+    right: 8%;
+  }
+}
